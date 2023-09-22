@@ -3,12 +3,10 @@ import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
+import pytest
 
-
+@pytest.mark.usefixtures("setup")
 class BaseClass:
-
-
-
    # def __init__(self,driver):
    #     self.driver=driver
    @staticmethod
