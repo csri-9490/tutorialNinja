@@ -15,6 +15,7 @@ class TestLoginCheckout(BaseClass):
         hmpage = HomePage(self.driver)
         lpage = hmpage.select_login_button_drirectly()
         accpage = lpage.login_to_application('reddy.csri@gmail.com', 'Shivaya1@')
+        accpage.clear_cart_item()
         accpage.click_on_product_type()
         ppage=ProdPage(self.driver)
         ppage.click_on_product()
