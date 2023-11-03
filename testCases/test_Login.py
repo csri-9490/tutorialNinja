@@ -6,9 +6,9 @@ from selenium.webdriver.common.by import By
 
 from pageObjects.homePage import HomePage
 from pageObjects.loginPage import LoginPage
-from utilities import readConfigurations, excelUtils
+from utilities import readConfigurations
 from utilities.baseclass import BaseClass
-from utilities.excelUtils import exceldata
+# from utilities.excelUtils import exceldata
 from utilities.testdata import test_data
 
 
