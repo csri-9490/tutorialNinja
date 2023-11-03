@@ -18,6 +18,7 @@ class HomePage:
     def click_myaccount_button(self):
         self.driver.find_element(By.XPATH, self.button_myaccount_xpath).click()
 
+
     def select_register_option(self):
         self.driver.find_element(By.LINK_TEXT, self.register_linktext).click()
         return regPage(self.driver)
