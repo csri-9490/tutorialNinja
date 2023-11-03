@@ -11,6 +11,7 @@ def pytest_addoption(parser):
     )
 @pytest.fixture
 def setup(request):
+    global driver
     # ch_op=Options()
     # ch_op = webdriver.ChromeOptions()
     # ch_op.add_argument('--disable-gpu')
