@@ -5,6 +5,10 @@ from selenium.webdriver.chrome.service import Service
 # from selenium.webdriver.chrome.service import Service as ChromeService
 
 
+def pytest_addoption(parser):
+    parser.addoption(
+        "--browser_name", action="store", default="chrome"
+    )
 @pytest.fixture
 def setup(request):
     # ch_op=Options()
@@ -17,16 +21,17 @@ def setup(request):
     # driver=webdriver.Chrome(service=srv)
     # driver=webdriver.Firefox(service=srv)
     # driver = webdriver.Chrome(service=Service("D:\\drivers\\chromedriver.exe"))
-    if browser == 'chrome':
+    browser_name = request.config.getoption("browser_name")
+    if browser_name == 'chrome':
             driver = webdriver.Chrome()
-    elif browser == 'firefox':
+    elif browser_name == 'firefox':
             driver = webdriver.Firefox()
     else:
-            driver = webdriver.Chrome()
+            browser_name = webdriver.Chrome()
     # return driver
     request.cls.driver = driver
 
 
-@pytest.fixture
-def browser(request):
-     return  request.config.getoption("--browser")
+# @pytest.fixture
+# def browser(request):
+#      return  request.config.getoption("--browser")
