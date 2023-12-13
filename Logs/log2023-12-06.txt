@@ -1,0 +1,18 @@
+2023-12-06 11:46:14,597 - test_ddriven.py:[71] - [INFO] - log info details
+2023-12-06 11:48:54,137 - test_ddriven.py:[72] - [INFO] - log info details
+2023-12-06 11:49:10,804 - test_ddriven.py:[72] - [INFO] - log info details
+2023-12-06 11:49:54,180 - test_ddriven.py:[72] - [INFO] - log info details
+2023-12-06 11:50:10,655 - test_ddriven.py:[72] - [INFO] - log info details
+2023-12-06 11:54:21,548 - test_ddriven.py:[65] - [INFO] - log info details,Test Started
+2023-12-06 11:54:34,469 - test_ddriven.py:[73] - [INFO] - log info details,Test Ended
+2023-12-06 11:54:38,638 - test_ddriven.py:[65] - [INFO] - log info details,Test Started
+2023-12-06 11:54:51,518 - test_ddriven.py:[73] - [INFO] - log info details,Test Ended
+2023-12-06 11:59:45,801 - test_Login.py:[26] - [INFO] - log info details:Test Started
+2023-12-06 11:59:51,220 - test_Login.py:[26] - [INFO] - log info details:Test Started
+2023-12-06 12:00:00,063 - test_Login.py:[46] - [INFO] - log info details:Test Ended
+2023-12-06 12:00:07,928 - test_Login.py:[51] - [INFO] - log info details:Test Started1
+2023-12-06 12:00:20,386 - test_Login.py:[70] - [INFO] - log info details:Test Ended1
+2023-12-06 12:27:40,242 - test_Login.py:[26] - [INFO] - StartTestreddy.csri@gmail.com
+2023-12-06 12:27:49,003 - test_Login.py:[46] - [INFO] - StartEndShivaya1@
+2023-12-06 12:27:56,885 - test_Login.py:[26] - [INFO] - StartTestreddy.csri1@gmail.com
+2023-12-06 12:28:05,391 - test_Login.py:[46] - [INFO] - StartEndShivaya2@

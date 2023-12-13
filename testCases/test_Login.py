@@ -1,4 +1,6 @@
+import logging
 from datetime import datetime
+import  openpyxl
 
 import pytest
 from selenium.webdriver.chromium import webdriver
@@ -7,11 +9,13 @@ from selenium.webdriver.common.by import By
 from pageObjects.homePage import HomePage
 from pageObjects.loginPage import LoginPage
 from utilities import readConfigurations
+from utilities.LogUtil import Logger
 from utilities.baseclass import BaseClass
 # from utilities.excelUtils import exceldata
 from utilities.testdata import test_data
 
 
+log = Logger(__name__, logging.INFO)
 class TestNames(BaseClass):
      url = readConfigurations.read_configuration('basic info', 'url')
      # ch_op=webdriver.ChromeOptions()
@@ -19,6 +23,7 @@ class TestNames(BaseClass):
      # @pytest.mark.parametrize("email,pwd",excelUtils.get_data_from_excel(path,"testdatas"))
      @pytest.mark.parametrize("email,pwd",(['reddy.csri@gmail.com','Shivaya1@'],['reddy.csri1@gmail.com','Shivaya2@']))
      def test_logins(self,email,pwd):
+        log.logger.info("StartTest"+str(email))
         # self.driver = setup
         self.driver.get(self.url)
         self.driver.maximize_window()
@@ -38,7 +43,8 @@ class TestNames(BaseClass):
         BaseClass.sleep_time(5)
         hmpage.click_myaccount_button()
         lpage.click_on_logout()
-        BaseClass.sleep_time(5)
+        log.logger.info("StartEnd"+str(pwd))
+        # BaseClass.sleep_time(5)
 
      def test_wrongpwd_logins(self):
         # self.driver = setup
@@ -60,7 +66,7 @@ class TestNames(BaseClass):
         print('actual text name is ',actual)
         BaseClass.sleep_time(5)
         assert actual==expected
-        BaseClass.sleep_time(5)
+        # BaseClass.sleep_time(5)
 
      def test_wrongemail_logins(self):
         # self.driver = setup

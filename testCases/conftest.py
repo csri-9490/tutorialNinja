@@ -9,7 +9,7 @@ def pytest_addoption(parser):
     parser.addoption(
         "--browser_name", action="store", default="chrome"
     )
-@pytest.fixture
+@pytest.fixture()
 def setup(request):
     global driver
     # ch_op=Options()
@@ -31,6 +31,14 @@ def setup(request):
             browser_name = webdriver.Chrome()
     # return driver
     request.cls.driver = driver
+
+    yield
+    driver.close()
+    driver.quit()
+
+
+
+
 
 
 # @pytest.fixture

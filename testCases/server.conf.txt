@@ -1,0 +1,3 @@
+#server Cofiguration file
+
+#Network Settings
